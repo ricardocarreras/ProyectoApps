@@ -4,7 +4,15 @@ import openai
 from openai import OpenAI
 
 # Configura tu clave API de OpenAI
-openai.api_key = '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'
+import os
+
+from dotenv import load_dotenv
+
+# Cargar variables de entorno desde el archivo .env
+load_dotenv()
+
+# Asignar la API KEY de OpenAI
+openai.api_key = os.getenv('OPENAI_API_KEY')
 
 def generar_publicacion_con_gpt(tema, palabras_clave, matiz):
     try:
