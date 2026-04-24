@@ -49,7 +49,7 @@ CV:
 """
     try:
         response = client.chat.completions.create(
-            model="gpt-4-1106-preview",
+            model="gpt-4.1",
             messages=[
                 {"role": "system", "content": "Eres un experto en selección de personal tecnológico."},
                 {"role": "user", "content": prompt}
